@@ -1,130 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Contact</title>
-    <!-- hello -->
-  </head>
 
-  <body>
-    <nav id="nav-bar" role="navigation">
-      <ul id="nav-ul" class="ul">
-        <li id="nav-li" tabindex="-1" role="button" aria-label="Click to go to home page" class="li">
-          <a id="nav-home" href="index.html#home" tabindex="0"> Home </a>
-        </li>
-        <li id="nav-li" tabindex="-1" role="button" aria-label="Click to go to home page" class="li">
-          <a id="nav-about" href="index.html#about" tabindex="0"> About </a>
-        </li>
-        <li id="nav-li" tabindex="-1" role="button" aria-label="Click to go to project page" class="li">
-          <a id="nav-project" href="project.html" tabindex="0"> Projects </a>
-        </li>
-        <li id="nav-li" tabindex="-1" role="button" aria-label="Click to go to skill page" class="li">
-          <a id="nav-skill" href="index.html#skill" tabindex="0"> Skills </a>
-        </li>
-        <li id="nav-li" tabindex="-1" role="button" aria-label="Click to go to contact page" class="li">
-          <a id="nav-contact" href="contact.html" tabindex="0"> Contact </a>
-        </li>
-      </ul>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Contact</title>
+  <!-- hello -->
+</head>
 
-    <section id="contact">
-      <h2 id="con-head">Contact</h2>
-      <div class="allcon">
-        <div class="container">
-          <form
-            action="index.html"
-            onsubmit="myFunction()"
-            id="form-id"
-            aria-label="User Information Form"
-          >
-            <fieldset>
-              <div class="fields">
-                <label for="form-fname">First Name</label>
-                <input
-                  type="text"
-                  id="form-fname"
-                  name="firstname"
-                  aria-label="Click to enter your first name"
-                  title="Click to enter your first name"
-                  role="textbox"
-                  aria-required="true"
-                />
+<body>
+  <nav id="nav-bar" role="navigation">
+    <ul id="nav-ul" class="ul">
+      <li id="nav-li" tabindex="-1" role="button" aria-label="Click to go to home page" class="li">
+        <a id="nav-home" href="index.html#home" tabindex="0"> Home </a>
+      </li>
+      <li id="nav-li" tabindex="-1" role="button" aria-label="Click to go to home page" class="li">
+        <a id="nav-about" href="index.html#about" tabindex="0"> About </a>
+      </li>
+      <li id="nav-li" tabindex="-1" role="button" aria-label="Click to go to project page" class="li">
+        <a id="nav-project" href="project.html" tabindex="0"> Projects </a>
+      </li>
+      <li id="nav-li" tabindex="-1" role="button" aria-label="Click to go to skill page" class="li">
+        <a id="nav-skill" href="index.html#skill" tabindex="0"> Skills </a>
+      </li>
+      <li id="nav-li" tabindex="-1" role="button" aria-label="Click to go to contact page" class="li">
+        <a id="nav-contact" href="contact.html" tabindex="0"> Contact </a>
+      </li>
+    </ul>
+  </nav>
 
-                <label for="form-lname">Last Name</label>
-                <input
-                  type="text"
-                  id="form-lname"
-                  name="lastname"
-                  aria-label="Click to enter your last name"
-                  title="Click to enter your last name"
-                  role="textbox"
-                  aria-required="true"
-                />
+  <section id="contact">
+    <h2 id="con-head">Contact</h2>
+    <div class="allcon">
+      <div class="container">
+        <form action="index.html" onsubmit="myFunction()" id="form-id" aria-label="User Information Form">
+          <fieldset>
+            <div class="fields">
+              <label for="form-fname">First Name</label>
+              <input type="text" id="form-fname" name="firstname" aria-label="Click to enter your first name"
+                title="Click to enter your first name" role="textbox" aria-required="true" />
 
-                <label for="form-country">Country</label>
-                <select
-                  id="form-country"
-                  name="country"
-                  title="Click to select your country."
-                  aria-label="Click to select your country.Selected"
-                  aria-required="true"
-                >
-                  <option id="form-india" value="india">India</option>
-                  <option id="form-australia" value="australia">Australia</option>
-                  <option id="form-canada" value="canada">Canada</option>
-                  <option id="form-usa" value="usa">USA</option>
-                </select>
+              <label for="form-lname">Last Name</label>
+              <input type="text" id="form-lname" name="lastname" aria-label="Click to enter your last name"
+                title="Click to enter your last name" role="textbox" aria-required="true" />
 
-                <label for="form-subject">Subject</label>
-                <textarea
-                  id="form-subject"
-                  name="subject"
-                  role="textbox"
-                  aria-label="Click to enter a subject"
-                  title="Click to enter a subject"
-                  placeholder="Write something.."
-                  style="height: 100px"
-                  aria-required="true"
-                ></textarea>
+              <label for="form-country">Country</label>
+              <select id="form-country" name="country" title="Click to select your country."
+                aria-label="Click to select your country.Selected" aria-required="true">
+                <option id="form-india" value="india">India</option>
+                <option id="form-australia" value="australia">Australia</option>
+                <option id="form-canada" value="canada">Canada</option>
+                <option id="form-usa" value="usa">USA</option>
+              </select>
 
-                <input
-                  id="form-submit"
-                  type="submit"
-                  value="Submit"
-                  class="btn"
-                  title="Submit Form"
-                  aria-label="Submit Form"
-                />
-              </div>
-            </fieldset>
-          </form>
-        </div>
-        <div class="con">
-          <img
-            id="contact-img"
-            src="pngtree-contact-us-flat-design-style-png-image_2766546-removebg-preview.png"
-            alt="contact us logo"
-          />
-        </div>
+              <label for="form-subject">Subject</label>
+              <textarea id="form-subject" name="subject" role="textbox" aria-label="Click to enter a subject"
+                title="Click to enter a subject" placeholder="Write something.." style="height: 100px"
+                aria-required="true"></textarea>
+
+              <input id="form-submit" type="submit" value="Submit" class="btn" title="Submit Form"
+                aria-label="Submit Form" />
+            </div>
+          </fieldset>
+        </form>
       </div>
-    </section>
+      <div class="con">
+        <img id="contact-img" src="pngtree-contact-us-flat-design-style-png-image_2766546-removebg-preview.png"
+          alt="contact us logo" />
+      </div>
+    </div>
+  </section>
 
-    <script>
-      function myFunction() {
-        var val1 =
-          "first name: " + document.getElementById("form-fname").value + "\n";
-        var val2 =
-          "Last name: " + document.getElementById("form-lname").value + "\n";
-        var val3 =
-          "Country: " + document.getElementById("form-country").value + "\n";
-        var val4 =
-          "Subject: " + document.getElementById("form-subject").value + "\n";
-        var final = "";
-        final += val1 + val2 + val3 + val4;
-        alert(final);
-      }
-    </script>
-  </body>
+  <script>
+    function myFunction() {
+      var val1 =
+        "first name: " + document.getElementById("form-fname").value + "\n";
+      var val2 =
+        "Last name: " + document.getElementById("form-lname").value + "\n";
+      var val3 =
+        "Country: " + document.getElementById("form-country").value + "\n";
+      var val4 =
+        "Subject: " + document.getElementById("form-subject").value + "\n";
+      var final = "";
+      final += val1 + val2 + val3 + val4;
+      alert(final);
+    }
+  </script>
+
+  <script>
+    if (sessionStorage.getItem('loggedIn') === 'true') {
+
+    }
+    else {
+      window.location.href = 'login.html';
+    }
+  </script>
+</body>
+
 </html>

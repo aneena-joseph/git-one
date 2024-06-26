@@ -1,9 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+#about {
+  padding-top: 10px;
+}
+
+.abo-div {
+  align-items: center;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px;
+  padding: 20px;
+  text-align: justify;
+  box-shadow: 0 0 10px 0 rgba(127, 12, 194, 0.45) inset;
+}
+
+.allcon {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 body {
@@ -11,92 +33,38 @@ body {
   font-weight: 410;
 }
 
-.ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  background-color: #15092e;
-  position: fixed;
-  z-index: 10;
-}
-
-.li {
-  float: left;
-}
-
-.li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.li a:hover {
-  background-color: #251052;
-}
-
-.intro {
-  height: 100vh;
-  background-image: url("Dark\ Blue\ Gradient\ Modern\ Futuristic\ Portfolio\ Cover.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
-.ul-skill {
-  padding: 10px;
-  list-style-type: circle;
-}
-
-.li-skill {
-  list-style-type: circle;
-}
-
-input[type="text"],
-select,
-textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-
-input[type="submit"] {
-  background-color: #15092e;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type="submit"]:hover {
-  background-color: rgb(62, 29, 99);
-}
-
-.container {
+.box1 {
+  background: white;
+  border-radius: 10px;
   padding: 20px;
-  margin: 20px;
-  width: 700px;
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.4) 0px 30px 60px -30px,
+    rgba(255, 255, 255, 0.2) 0px -2px 6px 0px inset;
+  transition: transform 0.3s;
 }
 
-fieldset {
-  padding: 20px;
-  background-color: #5d2e8c;
-  border: 0px;
-  color: white;
-  border-radius: 20px;
+.box1 h3 {
+  color: #5d2e8c;
+  font-size: 1.5em;
+  margin-bottom: 10px;
 }
 
-.allcon {
+.box1 p {
+  --local-color: #333;
+  color: var(--local-color);
+}
+
+.box1:hover {
+  transform: translateY(-10px);
+}
+
+.boxa {
+  border-radius: 10px;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+  transition: transform 0.3s;
 }
 
 .button-1 {
@@ -105,11 +73,6 @@ fieldset {
   border-style: none;
   box-sizing: border-box;
   color: white;
-  box-shadow: 0px -23px 25px 0px rgba(0, 0, 0, 0.17) inset,
-    0px -36px 30px 0px rgba(0, 0, 0, 0.15) inset,
-    0px -79px 40px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 1px rgba(0, 0, 0, 0.06),
-    0px 4px 2px rgba(0, 0, 0, 0.09), 0px 8px 4px rgba(0, 0, 0, 0.09),
-    0px 16px 8px rgba(0, 0, 0, 0.09);
   cursor: pointer;
   display: inline-block;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
@@ -125,177 +88,213 @@ fieldset {
   text-align: center;
   text-decoration: none;
   transition: color 100ms;
-  vertical-align: baseline;
   user-select: none;
+  vertical-align: baseline;
   -webkit-user-select: none;
   touch-action: manipulation;
+  box-shadow: 0px -23px 25px 0px rgba(0, 0, 0, 0.17) inset,
+    0px -36px 30px 0px rgba(0, 0, 0, 0.15) inset,
+    0px -79px 40px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 1px rgba(0, 0, 0, 0.06),
+    0px 4px 2px rgba(0, 0, 0, 0.09), 0px 8px 4px rgba(0, 0, 0, 0.09),
+    0px 16px 8px rgba(0, 0, 0, 0.09);
 }
 
-.button-1:hover,
-.button-1:focus {
+.button-1:focus,
+.button-1:hover {
   background-color: #7b5eb6;
   color: black;
 }
 
-.skillbtn {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 50px;
+#contact { padding-top: 10px; }
+
+.container {
+  margin: 20px;
+  padding: 20px;
+  width: 700px;
+}
+
+fieldset {
+  background-color: #5d2e8c;
+  border: 0px;
+  border-radius: 20px;
+  color: white;
+  padding: 20px;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  height: 50px;
+  padding-top: 20px;
+  text-align: center;
 }
 
 h2 {
-  padding-left: 20px;
   color: #5d2e8c;
+  padding-left: 20px;
 }
 
-#project {
-  background-color: #5d2e8c;
+.intro {
+  background-image: url("Dark\ Blue\ Gradient\ Modern\ Futuristic\ Portfolio\ Cover.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100vh;
+}
+
+input[type="submit"] {
+  background-color: #15092e;
+  border: none;
+  border-radius: 4px;
   color: white;
-  padding-top: 10px;
-  height: 100%;
+  cursor: pointer;
+  padding: 12px 20px;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(62, 29, 99);
+}
+
+input[type="text"],
+select,
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  margin-top: 6px;
+  padding: 12px;
+  resize: vertical;
+  width: 100%;
+}
+
+.li {
+  float: left;
+}
+
+.li a {
+  color: white;
+  display: block;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.li a:hover {
+  background-color: #251052;
+}
+
+.li-skill {
+  list-style-type: circle;
+}
+
+.p {
+  text-align: justify;
 }
 
 .pro-box {
   display: flex;
   flex-direction: column;
+  height: 100%;
   justify-content: space-around;
   padding: 60px;
+}
+
+#project {
+  background-color: #5d2e8c;
+  color: white;
   height: 100%;
-}
-
-.boxa {
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-  border-radius: 10px;
-  transition: transform 0.3s;
-  gap: 20px;
-}
-
-.box1 {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: rgba(255, 255, 255, 0.3) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.4) 0px 30px 60px -30px,
-    rgba(255, 255, 255, 0.2) 0px -2px 6px 0px inset;
-  transition: transform 0.3s;
-}
-
-.box1 h3 {
-  font-size: 1.5em;
-  color: #5d2e8c;
-  margin-bottom: 10px;
-}
-
-.box1 p {
-  --local-color: #333;
-  color: var(--local-color);
-}
-
-.box1:hover {
-  transform: translateY(-10px);
+  padding-top: 10px;
 }
 
 #skill {
-  padding-top: 10px;
   background-color: #5d2e8c;
-}
-#skill h2 {
-  color: white;
-}
-
-#about {
   padding-top: 10px;
 }
 
-.abo-div {
-  display: flex;
-  flex-direction: row;
+#skill h2 { color: white; }
+
+.skillbtn {
   align-items: center;
-  justify-content: space-between;
-  text-align: justify;
-  padding: 20px;
-  margin: 10px;
-  border-radius: 15px;
-  box-shadow: 0 0 10px 0 rgba(127, 12, 194, 0.45) inset;
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
 }
 
-p {
-  text-align: justify;
+.ul {
+  background-color: #15092e;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
 }
 
-#contact {
-  padding-top: 10px;
+.ul-skill {
+  list-style-type: circle;
+  padding: 10px;
 }
-footer {
-  height: 50px;
-  background-color: black;
-  color: white;
-  text-align: center;
-  padding-top: 20px;
-}
+
 @media only screen and (max-width: 600px) {
-  .ul {
-    font-size: 13px;
+  .abo-div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+    text-align: justify;
   }
+
+  .abo-div img { width: 150px; }
+  
+  #about-content {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  #about-img { width: 150px; }
+
   .allcon {
     display: flex;
     flex-direction: column;
   }
+
+  .button-1 { font-size: 13px; }
+
+  .boxa {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    transition: transform 0.3s;
+  }
+
   .container {
-    padding: 5px;
-    margin: 5px;
-    width: 300px;
     font-size: 15px;
+    margin: 5px;
+    padding: 5px;
+    width: 300px;
   }
-  .con img {
-    width: 150px;
-  }
+
+  p { font-size: 15px; }
+
   .pro-box {
     display: flex;
     flex-direction: column;
+    height: 100%;
     justify-content: space-around;
     padding: 0px;
-    height: 100%;
   }
-  .boxa {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    border-radius: 10px;
-    transition: transform 0.3s;
-    gap: 20px;
-  }
-  #project {
-    height: 100%;
-  }
-  p {
-    font-size: 15px;
-  }
+
+  #project { height: 100%; }
+
   .skillbtn {
     display: flex;
     flex-direction: column;
     gap: 1em;
     padding: 50px;
   }
-  .button-1 {
-    font-size: 13px;
-  }
-  .abo-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    text-align: justify;
-    padding: 5px;
-  }
-  #about-content {
-    padding: 10px;
-    font-size: 13px;
-  }
-  #about-img {
-    width: 150px;
-  }
+
+  .ul { font-size: 13px; }
 }

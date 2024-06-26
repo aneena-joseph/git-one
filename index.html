@@ -50,24 +50,6 @@
         />
         <div class="abop">
           <p id="about-content" tabindex="-1" >
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-            eum voluptate aut quos sint eius pariatur dignissimos suscipit
-            provident iure rem est, minima explicabo optio sed officia tempore
-            nam reprehenderit praesentium numquam asperiores cupiditate, nihil
-            fugiat aliquid! Minima rem illum, voluptates inventore natus cumque
-            asperiores doloremque voluptatibus ea sequi facilis cupiditate
-            delectus veritatis iusto aperiam magni minus? Eveniet vero earum
-            neque deleniti quasi maxime consectetur illum quo ipsam nisi. Ipsa
-            cupiditate temporibus, quis accusamus cumque voluptas quibusdam id
-            dolores perspiciatis magni voluptates nesciunt ut optio quod eveniet
-            laborum sequi reiciendis quas in dolore labore incidunt? Nesciunt
-            eos est rerum eius, facere dolorum soluta temporibus voluptate
-            voluptatem quaerat accusantium perspiciatis aliquam reiciendis modi
-            tempore non! Alias nam labore quae culpa voluptate amet officiis
-            delectus ducimus minus cum velit, quisquam natus cumque voluptas
-            praesentium tempore nostrum autem iste fuga est odit. Temporibus
-            voluptatum odio aspernatur dolorem veritatis tenetur hic ab aut
-            debitis.
           </p>
         </div>
       </div>
@@ -83,7 +65,6 @@
           aria-label="HTML listitem"
           tabindex="-1"
         >
-          HTML
         </div>
         <div
           id="skill-2"
@@ -92,7 +73,6 @@
           aria-label="CSS listitem"
           tabindex="-1"
         >
-          CSS
         </div>
         <div
           id="skill-3"
@@ -101,7 +81,6 @@
           aria-label="Javascript listitem"
           tabindex="-1"
         >
-          Javascript
         </div>
         <div
           id="skill-4"
@@ -110,7 +89,6 @@
           aria-label="Bootstrap listitem"
           tabindex="-1"
         >
-          Bootstrap
         </div>
         <div
           id="skill-5"
@@ -119,7 +97,6 @@
           aria-label="Java listitem"
           tabindex="-1"
         >
-          Java
         </div>
         <div
           id="skill-6"
@@ -128,7 +105,6 @@
           aria-label="Python listitem"
           tabindex="-1"
         >
-          Python
         </div>
         <div
           id="skill-7"
@@ -137,7 +113,6 @@
           aria-label="C listitem"
           tabindex="-1"
         >
-          C
         </div>
         <div
           id="skill-8"
@@ -146,7 +121,6 @@
           aria-label="C + + listitem"
           tabindex="-1"
         >
-          C++
         </div>
       </div>
     </section>
@@ -154,20 +128,30 @@
       <i class="fa fa-copyright" aria-hidden="true"></i> Aneena Joseph 2024
     </footer>
     <script>
-      if (localStorage.getItem('loggedIn') !== 'true') {
-        window.location.href = 'login.html';
+        if (sessionStorage.getItem('loggedIn') === 'true') {
+        var p1=localStorage.getItem('p');
+        var s1=localStorage.getItem('s1');
+        var s2=localStorage.getItem('s2');
+        var s3=localStorage.getItem('s3');
+        var s4=localStorage.getItem('s4');
+        var s5=localStorage.getItem('s5');
+        var s6=localStorage.getItem('s6');
+        var s7=localStorage.getItem('s7');
+        var s8=localStorage.getItem('s8');
+
+        document.getElementById("about-content").innerHTML=p1;
+        document.getElementById("skill-1").innerHTML=s1;
+        document.getElementById("skill-2").innerHTML=s2;
+        document.getElementById("skill-3").innerHTML=s3;
+        document.getElementById("skill-4").innerHTML=s4;
+        document.getElementById("skill-5").innerHTML=s5;
+        document.getElementById("skill-6").innerHTML=s6;
+        document.getElementById("skill-7").innerHTML=s7;
+        document.getElementById("skill-8").innerHTML=s8;
       }
       else
       {
-          var isLoggedIn = localStorage.getItem('count');
-          if(isLoggedIn==0)
-          {
-            window.location.href = 'login.html';
-          }
-          else
-          {
-            localStorage.setItem("count", 0);
-          }
+        window.location.href = 'login.html';
       }
   </script>
   </body>

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Projects</title>
 </head>
 
@@ -35,42 +36,50 @@
             <div class="boxa">
                 <div class="box1" tabindex="-1">
                     <h3 id="pro1-head" tabindex="0">Project 1</h3>
-                    <p id="pro1-p">This project involved designing a responsive website for a local restaurant. The site adapts
-                        seamlessly to various screen sizes, ensuring a consistent user experience across devices. Key
-                        features include an interactive menu, online reservations, and customer reviews.</p>
+                    <p id="pro1-p"></p>
                     </p>
                 </div>
                 <div class="box1" tabindex="-1">
                     <h3 id="pro2-head" tabindex="0">Project 2</h3>
-                    <p id="pro2-p">Developed a mobile application for a fitness startup. The app tracks user workouts, provides
-                        personalized fitness plans, and integrates with wearable devices to monitor health metrics. The
-                        project included both iOS and Android versions with a sleek, user-friendly interface.</p>
+                    <p id="pro2-p"></p>
                 </div>
                 <div class="box1" tabindex="-1">
                     <h3 id="pro3-head" tabindex="0">Project 3</h3>
-                    <p id="pro3-p">Created a robust backend API for an e-commerce platform. The API handles user authentication,
-                        product catalog management, order processing, and payment integration. It is built with
-                        scalability in mind, supporting high traffic and complex transactions.</p>
+                    <p id="pro3-p"></p>
                 </div>
             </div>
             <div class="boxa">
                 <div class="box1" tabindex="-1">
                     <h3 id="pro4-head" tabindex="0">Project 4</h3>
-                    <p id="pro4-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur accusamus rem cum id
-                        obcaecati voluptatum accusantium voluptate. Earum perferendis quisquam et doloribus magnam hic
-                        id eveniet maxime ipsa, soluta iusto. Libero est deleniti sit quo nostrum amet, nulla reiciendis
-                        alias, blanditiis doloribus ducimus illum! Hic culpa labore magnam minima quos?</p>
+                    <p id="pro4-p"></p>
                 </div>
                 <div class="box1" tabindex="-1">
                     <h3 id="pro5-head" tabindex="0">Project 5</h3>
-                    <p id="pro5-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quae doloremque natus repudiandae
-                        porro recusandae aliquam officiis eos impedit explicabo. Saepe deleniti deserunt veritatis eos.
-                        Modi distinctio officiis ratione perspiciatis, animi, sed veritatis velit ipsa ut ab nisi, error
-                        facere esse obcaecati! Ullam architecto commodi dicta corporis, ipsa minus similique.</p>
+                    <p id="pro5-p"></p>
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+      if (sessionStorage.getItem('loggedIn') === 'true') {
+        var p1=localStorage.getItem('pro1');
+        var p2=localStorage.getItem('pro2');
+        var p3=localStorage.getItem('pro3');
+        var p4=localStorage.getItem('pro4');
+        var p5=localStorage.getItem('pro5');
+
+        document.getElementById("pro1-p").innerHTML=p1;
+        document.getElementById("pro2-p").innerHTML=p2;
+        document.getElementById("pro3-p").innerHTML=p3;
+        document.getElementById("pro4-p").innerHTML=p4;
+        document.getElementById("pro5-p").innerHTML=p5;
+      }
+      else
+      {
+        window.location.href = 'login.html';
+      }
+    </script>
 
 </body>
 
