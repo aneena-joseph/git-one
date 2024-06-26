@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+  <script src="script.js"></script>
+    <title>Sign Up</title>
+</head>
+<body>
+    <div class="container">
+        <div class="screen">
+          <div class="screen__content">
+            <form
+              class="login"
+              id="signup-form"
+              aria-label="Sign Up Form"
+              onsubmit="enter(event)"
+            >
+              <h2 id="signup-head">Sign Up Page</h2>
+              <div class="login__field">
+                <i class="login__icon fas fa-user"></i>
+                <input
+                  type="text"
+                  id="signup-user-name"
+                  aria-label="Click to enter a user name"
+                  title="Click to enter a user name"
+                  role="textbox"
+                  class="login__input"
+                  placeholder="New User name"
+                />
+              </div>
+              <div class="login__field">
+                <i class="login__icon fas fa-lock"></i>
+                <input
+                  type="password"
+                  id="signup-pass-word"
+                  aria-label="Click to enter a password"
+                  title="Click to enter a password"
+                  role="textbox"
+                  class="login__input"
+                  placeholder="New Password"
+                />
+              </div>
+              <button
+                type="submit"
+                class="button login__submit"
+                value="Submit"
+                title="Sign Up Button"
+                aria-label="Sign Up Button"
+              >
+                <span class="button__text">Sign Up Now</span>
+                <i class="button__icon fas fa-chevron-right"></i>
+              </button>
+              <h3><a href="login.html">Login</a></h3>
+            </form>
+          </div>
+          <div class="screen__background">
+            <span
+              class="screen__background__shape screen__background__shape4"
+            ></span>
+            <span
+              class="screen__background__shape screen__background__shape3"
+            ></span>
+            <span
+              class="screen__background__shape screen__background__shape2"
+            ></span>
+            <span
+              class="screen__background__shape screen__background__shape1"
+            ></span>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

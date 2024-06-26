@@ -153,5 +153,22 @@
     <footer id="home-footer" tabindex="-1">
       <i class="fa fa-copyright" aria-hidden="true"></i> Aneena Joseph 2024
     </footer>
+    <script>
+      if (localStorage.getItem('loggedIn') !== 'true') {
+        window.location.href = 'login.html';
+      }
+      else
+      {
+          var isLoggedIn = localStorage.getItem('count');
+          if(isLoggedIn==0)
+          {
+            window.location.href = 'login.html';
+          }
+          else
+          {
+            localStorage.setItem("count", 0);
+          }
+      }
+  </script>
   </body>
 </html>
