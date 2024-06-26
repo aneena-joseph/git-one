@@ -71,7 +71,14 @@
             </div>
         </div>
     </section>
-
+    <script>
+      if (localStorage.getItem('loggedIn') === 'true') {
+      }
+      else
+      {
+        window.location.href = 'login.html';
+      }
+  </script>
 </body>
 
 </html>

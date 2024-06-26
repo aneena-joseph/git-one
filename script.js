@@ -16,6 +16,7 @@ function check(event) {
   let users = JSON.parse(localStorage.getItem("users")) || [];
 
   let loggedIn = false;
+  localStorage.setItem("loggedIn", "false");
 
   for (let i = 0; i < users.length; i++) {
     if (username === users[i].username && password === users[i].password) {
