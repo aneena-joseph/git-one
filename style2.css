@@ -16,7 +16,7 @@ body {
   background: linear-gradient(90deg, #c7c5f4, #776bcc);
 }
 
-button__icon {
+.button__icon {
   color: #7875b5;
   font-size: 24px;
   margin-left: auto;
