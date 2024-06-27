@@ -8,27 +8,72 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <script src="script2.js"></script>
     <title>Portfolio</title>
   </head>
-<!-- heelo -->
-  <body>
+  <body onload="loadIndex()">
+    <div id="loader"><p id="loader-content">Loading...</p></div>
     <nav id="nav-bar" role="navigation">
       <ul id="nav-ul" class="ul">
-        <li id="nav-li" tabindex="-1" role="button" aria-label="Click to go to home page" class="li">
-          <a id="nav-home" href="index.html#home" tabindex="0"> Home </a>
-        </li>
-        <li id="nav-li" tabindex="-1" role="button" aria-label="Click to go to home page" class="li">
-          <a id="nav-about" href="index.html#about" tabindex="0"> About </a>
-        </li>
-        <li id="nav-li" tabindex="-1" role="button" aria-label="Click to go to project page" class="li">
-          <a id="nav-project" href="project.html" tabindex="0"> Projects </a>
-        </li>
-        <li id="nav-li" tabindex="-1" role="button" aria-label="Click to go to skill page" class="li">
-          <a id="nav-skill" href="index.html#skill" tabindex="0"> Skills </a>
-        </li>
-        <li id="nav-li" tabindex="-1" role="button" aria-label="Click to go to contact page" class="li">
-          <a id="nav-contact" href="contact.html" tabindex="0"> Contact </a>
-        </li>
+        <div class="topnav-right" id="topnav">
+          <li
+            id="nav-li"
+            tabindex="-1"
+            role="button"
+            aria-label="Click to go to home page"
+            class="li"
+          >
+            <a id="nav-home" href="index.html#home" tabindex="0"> Home </a>
+          </li>
+          <li
+            id="nav-li"
+            tabindex="-1"
+            role="button"
+            aria-label="Click to go to home page"
+            class="li"
+          >
+            <a id="nav-about" href="index.html#about" tabindex="0"> About </a>
+          </li>
+          <li
+            id="nav-li"
+            tabindex="-1"
+            role="button"
+            aria-label="Click to go to project page"
+            class="li"
+          >
+            <a id="nav-project" href="project.html" tabindex="0"> Projects </a>
+          </li>
+          <li
+            id="nav-li"
+            tabindex="-1"
+            role="button"
+            aria-label="Click to go to skill page"
+            class="li"
+          >
+            <a id="nav-skill" href="index.html#skill" tabindex="0"> Skills </a>
+          </li>
+          <li
+            id="nav-li"
+            tabindex="-1"
+            role="button"
+            aria-label="Click to go to contact page"
+            class="li"
+          >
+            <a id="nav-contact" href="contact.html" tabindex="0"> Contact </a>
+          </li>
+          <li
+            id="nav-li"
+            tabindex="-1"
+            role="button"
+            aria-label="Click to log out"
+            class="li"
+          >
+            <a id="nav-logout" href="login.html" tabindex="0">
+              <i class="fa fa-sign-out"></i>
+            </a>
+          </li>
+        </div>
       </ul>
     </nav>
 
@@ -36,27 +81,37 @@
       role="banner"
       class="intro"
       id="home"
-      title="portfolio intro image" tabindex="-1" 
+      title="portfolio intro image"
+      tabindex="-1"
     ></header>
 
     <section id="about" role="about section">
-      <h2 id="about-head" id="About heading" title="About heading" tabindex="0" >About Me</h2>
+      <h2 id="about-head" id="About heading" title="About heading" tabindex="0">
+        About Me
+      </h2>
       <div class="abo-div">
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN2fnmkrkl6DmG8Tvdiczz03Nt1DSRGonK0A&s"
           alt="my image"
           title="my image"
-          id="about-img" tabindex="-1" 
+          id="about-img"
+          tabindex="-1"
         />
         <div class="abop">
-          <p id="about-content" tabindex="-1" >
-          </p>
+          <p id="about-content" tabindex="-1"></p>
         </div>
       </div>
     </section>
 
     <section id="skill" role="skills section">
-      <h2 id="skill-head" aria-label="Skill heading" title="Skill heading" tabindex="0">Skills</h2>
+      <h2
+        id="skill-head"
+        aria-label="Skill heading"
+        title="Skill heading"
+        tabindex="0"
+      >
+        Skills
+      </h2>
       <div class="skillbtn">
         <div
           id="skill-1"
@@ -64,95 +119,75 @@
           style="cursor: context-menu"
           aria-label="HTML listitem"
           tabindex="-1"
-        >
-        </div>
+        ></div>
         <div
           id="skill-2"
           class="button-1"
           style="cursor: context-menu"
           aria-label="CSS listitem"
           tabindex="-1"
-        >
-        </div>
+        ></div>
         <div
           id="skill-3"
           class="button-1"
           style="cursor: context-menu"
           aria-label="Javascript listitem"
           tabindex="-1"
-        >
-        </div>
+        ></div>
         <div
           id="skill-4"
           class="button-1"
           style="cursor: context-menu"
           aria-label="Bootstrap listitem"
           tabindex="-1"
-        >
-        </div>
+        ></div>
         <div
           id="skill-5"
           class="button-1"
           style="cursor: context-menu"
           aria-label="Java listitem"
           tabindex="-1"
-        >
-        </div>
+        ></div>
         <div
           id="skill-6"
           class="button-1"
           style="cursor: context-menu"
           aria-label="Python listitem"
           tabindex="-1"
-        >
-        </div>
+        ></div>
         <div
           id="skill-7"
           class="button-1"
           style="cursor: context-menu"
           aria-label="C listitem"
           tabindex="-1"
-        >
-        </div>
+        ></div>
         <div
           id="skill-8"
           class="button-1"
           style="cursor: context-menu"
           aria-label="C + + listitem"
           tabindex="-1"
-        >
-        </div>
+        ></div>
       </div>
     </section>
     <footer id="home-footer" tabindex="-1">
       <i class="fa fa-copyright" aria-hidden="true"></i> Aneena Joseph 2024
     </footer>
+    
     <script>
-        if (sessionStorage.getItem('loggedIn') === 'true') {
-        var p1=localStorage.getItem('p');
-        var s1=localStorage.getItem('s1');
-        var s2=localStorage.getItem('s2');
-        var s3=localStorage.getItem('s3');
-        var s4=localStorage.getItem('s4');
-        var s5=localStorage.getItem('s5');
-        var s6=localStorage.getItem('s6');
-        var s7=localStorage.getItem('s7');
-        var s8=localStorage.getItem('s8');
-
-        document.getElementById("about-content").innerHTML=p1;
-        document.getElementById("skill-1").innerHTML=s1;
-        document.getElementById("skill-2").innerHTML=s2;
-        document.getElementById("skill-3").innerHTML=s3;
-        document.getElementById("skill-4").innerHTML=s4;
-        document.getElementById("skill-5").innerHTML=s5;
-        document.getElementById("skill-6").innerHTML=s6;
-        document.getElementById("skill-7").innerHTML=s7;
-        document.getElementById("skill-8").innerHTML=s8;
+      if (sessionStorage.getItem("count") === "0") {
+        sessionStorage.setItem("count", "1");
+        window.addEventListener("load", function () {
+          setTimeout(() => {
+            let loader = document.getElementById("loader");
+            loader.style = "display: none;";
+          }, 1000);
+        });
+      } else {
+        let loader = document.getElementById("loader");
+        loader.style = "display: none;";
       }
-      else
-      {
-        window.location.href = 'login.html';
-      }
-  </script>
+    </script>
   </body>
 </html>

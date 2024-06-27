@@ -2,85 +2,71 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>Projects</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <script src="script2.js"></script>
+  <title>Projects</title>
 </head>
 
-<body>
+<body onload="loadProject()">
   <nav id="nav-bar" role="navigation">
     <ul id="nav-ul" class="ul">
-      <li id="nav-li" tabindex="-1" role="button" aria-label="Click to go to home page" class="li">
-        <a id="nav-home" href="index.html#home" tabindex="0"> Home </a>
-      </li>
-      <li id="nav-li" tabindex="-1" role="button" aria-label="Click to go to home page" class="li">
-        <a id="nav-about" href="index.html#about" tabindex="0"> About </a>
-      </li>
-      <li id="nav-li" tabindex="-1" role="button" aria-label="Click to go to project page" class="li">
-        <a id="nav-project" href="project.html" tabindex="0"> Projects </a>
-      </li>
-      <li id="nav-li" tabindex="-1" role="button" aria-label="Click to go to skill page" class="li">
-        <a id="nav-skill" href="index.html#skill" tabindex="0"> Skills </a>
-      </li>
-      <li id="nav-li" tabindex="-1" role="button" aria-label="Click to go to contact page" class="li">
-        <a id="nav-contact" href="contact.html" tabindex="0"> Contact </a>
-      </li>
+      <div class="topnav-right" id="topnav">
+        <li id="nav-li" tabindex="-1" role="button" aria-label="Click to go to home page" class="li">
+          <a id="nav-home" href="index.html#home" tabindex="0"> Home </a>
+        </li>
+        <li id="nav-li" tabindex="-1" role="button" aria-label="Click to go to home page" class="li">
+          <a id="nav-about" href="index.html#about" tabindex="0"> About </a>
+        </li>
+        <li id="nav-li" tabindex="-1" role="button" aria-label="Click to go to project page" class="li">
+          <a id="nav-project" href="project.html" tabindex="0"> Projects </a>
+        </li>
+        <li id="nav-li" tabindex="-1" role="button" aria-label="Click to go to skill page" class="li">
+          <a id="nav-skill" href="index.html#skill" tabindex="0"> Skills </a>
+        </li>
+        <li id="nav-li" tabindex="-1" role="button" aria-label="Click to go to contact page" class="li">
+          <a id="nav-contact" href="contact.html" tabindex="0"> Contact </a>
+        </li>
+        <li id="nav-li" tabindex="-1" role="button" aria-label="Click to log out" class="li">
+          <a id="nav-logout" href="login.html" tabindex="0"> <i class="fa fa-sign-out"></i> </a>
+        </li>
+      </div>
     </ul>
   </nav>
 
-    <section id="project">
-        <h2 id="project-head" style="color: white;">Projects</h2>
-        <div class="pro-box">
-            <div class="boxa">
-                <div class="box1" tabindex="-1">
-                    <h3 id="pro1-head" tabindex="0">Project 1</h3>
-                    <p id="pro1-p"></p>
-                    </p>
-                </div>
-                <div class="box1" tabindex="-1">
-                    <h3 id="pro2-head" tabindex="0">Project 2</h3>
-                    <p id="pro2-p"></p>
-                </div>
-                <div class="box1" tabindex="-1">
-                    <h3 id="pro3-head" tabindex="0">Project 3</h3>
-                    <p id="pro3-p"></p>
-                </div>
-            </div>
-            <div class="boxa">
-                <div class="box1" tabindex="-1">
-                    <h3 id="pro4-head" tabindex="0">Project 4</h3>
-                    <p id="pro4-p"></p>
-                </div>
-                <div class="box1" tabindex="-1">
-                    <h3 id="pro5-head" tabindex="0">Project 5</h3>
-                    <p id="pro5-p"></p>
-                </div>
-            </div>
+  <section id="project">
+    <h2 id="project-head" style="color: white;">Projects</h2>
+    <div class="pro-box">
+      <div class="boxa">
+        <div class="box1" tabindex="-1">
+          <h3 id="pro1-head" tabindex="0">Project 1</h3>
+          <p id="pro1-p"></p>
+          </p>
         </div>
-    </section>
-
-    <script>
-      if (sessionStorage.getItem('loggedIn') === 'true') {
-        var p1=localStorage.getItem('pro1');
-        var p2=localStorage.getItem('pro2');
-        var p3=localStorage.getItem('pro3');
-        var p4=localStorage.getItem('pro4');
-        var p5=localStorage.getItem('pro5');
-
-        document.getElementById("pro1-p").innerHTML=p1;
-        document.getElementById("pro2-p").innerHTML=p2;
-        document.getElementById("pro3-p").innerHTML=p3;
-        document.getElementById("pro4-p").innerHTML=p4;
-        document.getElementById("pro5-p").innerHTML=p5;
-      }
-      else
-      {
-        window.location.href = 'login.html';
-      }
-    </script>
+        <div class="box1" tabindex="-1">
+          <h3 id="pro2-head" tabindex="0">Project 2</h3>
+          <p id="pro2-p"></p>
+        </div>
+        <div class="box1" tabindex="-1">
+          <h3 id="pro3-head" tabindex="0">Project 3</h3>
+          <p id="pro3-p"></p>
+        </div>
+      </div>
+      <div class="boxa">
+        <div class="box1" tabindex="-1">
+          <h3 id="pro4-head" tabindex="0">Project 4</h3>
+          <p id="pro4-p"></p>
+        </div>
+        <div class="box1" tabindex="-1">
+          <h3 id="pro5-head" tabindex="0">Project 5</h3>
+          <p id="pro5-p"></p>
+        </div>
+      </div>
+    </div>
+  </section>
 
 </body>
-
 </html>

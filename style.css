@@ -22,6 +22,11 @@
   box-shadow: 0 0 10px 0 rgba(127, 12, 194, 0.45) inset;
 }
 
+.active {
+  background-color:#7b5eb6;
+  color: white;
+}
+
 .allcon {
   align-items: center;
   display: flex;
@@ -113,6 +118,10 @@ body {
   width: 700px;
 }
 
+.fa-sign-out {
+  font-weight: bolder;
+}
+
 fieldset {
   background-color: #5d2e8c;
   border: 0px;
@@ -180,11 +189,35 @@ textarea {
 }
 
 .li a:hover {
-  background-color: #251052;
+  color: #ece6fa;
 }
 
 .li-skill {
   list-style-type: circle;
+}
+
+#loader {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  z-index: 99999;  
+  background: #5d2e8c;
+}
+
+#loader p {  
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 100px;
+  padding: 0;
+  margin: 0;
 }
 
 .p {
@@ -218,6 +251,10 @@ textarea {
   display: flex;
   justify-content: space-around;
   padding: 50px;
+}
+
+.topnav-right {
+  float: right;
 }
 
 .ul {
@@ -274,6 +311,7 @@ textarea {
     font-size: 15px;
     margin: 5px;
     padding: 5px;
+    padding-top: 20px;
     width: 300px;
   }
 
@@ -296,5 +334,5 @@ textarea {
     padding: 50px;
   }
 
-  .ul { font-size: 13px; }
+  .ul { font-size: 12px; }
 }
