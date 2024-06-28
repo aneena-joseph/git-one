@@ -8,8 +8,19 @@
   padding: 0;
 }
 
-a:visited {
+a {
   color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1c0c41;
+}
+
+#alert {
+  color: red;
+  font-weight: bold;
+  font-size: 13px;
 }
 
 body {
@@ -220,4 +231,17 @@ h3 {
   height: 100%;
   position: relative;
   z-index: 1;
+}
+
+.password-fields {
+  display: flex;
+  align-items: center;
+}
+
+.showPasswordLabel {
+  display: inline;
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 4px;
+  color: #5d54a4;
 }

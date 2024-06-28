@@ -53,60 +53,92 @@ storeItemToLocal("pro4", PROJECT4);
 storeItemToLocal("pro5", PROJECT5);
 
 function getItemFromLocal(key) {
-    return localStorage.getItem(key);
+	return localStorage.getItem(key);
 }
 
-function storeItemToLocal(key,value) {
-    localStorage.setItem(key, value);
+function storeItemToLocal(key, value) {
+	localStorage.setItem(key, value);
 }
 
-function getValue(argument){
-    return document.getElementById(argument).value;
+function getValue(argument) {
+	return document.getElementById(argument).value;
 }
 
-function idElement(argument){
+function idElement(argument) {
 	return document.getElementById(argument);
 }
 
 if (!getItemFromLocal("users")) {
-    storeItemToLocal("users", JSON.stringify(users));
+	storeItemToLocal("users", JSON.stringify(users));
+}
+
+function showPasswordLogin() {
+	let loginPassword = document.getElementById("pass-word");
+	if (loginPassword.type === "password") {
+		loginPassword.type = "text";
+	} else {
+		loginPassword.type = "password";
+	}
+}
+
+function checkIfLoggedIn(key, username, password) {
+	if (username === key.username && password === key.password) {
+		return true;
+	}
+		return false;
+}
+
+function getAlertMessage(message) {
+	document.getElementById("alert").innerHTML = message;
+	setTimeout(function () {
+		document.getElementById("alert").innerHTML = "";
+	}, 1000);
 }
 
 function check(event) {
-  event.preventDefault();
-  const username = getValue("user-name");
-  const password = getValue("pass-word");
-  let users = JSON.parse(getItemFromLocal("users")) || [];
-  let loggedIn = false;
-  sessionStorage.setItem("loggedIn", "false");
-  for (let i = 0; i < users.length; i++) {
-    if (username === users[i].username && password === users[i].password) {
-      loggedIn = true;
-      break;
-    }
-  }
-  if (loggedIn) {
-    sessionStorage.setItem("loggedIn", "true");
-    idElement("login-form").action = "index.html";
-    idElement("login-form").submit();
-    sessionStorage.setItem("count", "0");
-  } else if (username === "" || password === "") {
-    alert("Fields cannot be blank.");
-  } else {
-    alert("Incorrect username or password.");
-  }
+	event.preventDefault();
+	const username = getValue("user-name");
+	const password = getValue("pass-word");
+	let users = JSON.parse(getItemFromLocal("users")) || [];
+	let loggedIn = false;
+	sessionStorage.setItem("loggedIn", "false");
+	users.forEach((user) => {
+		if (checkIfLoggedIn(user, username, password)) {
+			loggedIn = true;
+		}
+	});
+	if (loggedIn) {
+		sessionStorage.setItem("loggedIn", "true");
+		idElement("login-form").action = "index.html#home";
+		idElement("login-form").submit();
+		sessionStorage.setItem("count", "0");
+	} else if (username === "" || password === "") {
+		getAlertMessage("Fields cannot be blank!");
+	} else {
+		getAlertMessage("Incorrect Password or <br>Username!");
+	}
+}
+
+function showPasswordSignUp() {
+	let signupPassword = document.getElementById("signup-pass-word");
+	if (signupPassword.type === "password") {
+		signupPassword.type = "text";
+	} else {
+		signupPassword.type = "password";
+	}
 }
 
 function enter(event) {
-  event.preventDefault();
-  const username = getValue("signup-user-name");
-  const password = getValue("signup-pass-word");
-  if (username === "" || password === "") {
-    alert("Fields cannot be blank.");
-  }
-  let users = JSON.parse(getItemFromLocal("users")) || [];
-  users.push({ username, password });
-  storeItemToLocal("users", JSON.stringify(users));
-  window.location.href = "login.html";
-  alert("Sign up successful! You can now log in.");
+	event.preventDefault();
+	const username = getValue("signup-user-name");
+	const password = getValue("signup-pass-word");
+	if (username === "" || password === "") {
+		getAlertMessage("Fields cannot be blank!");
+	} else {
+		let users = JSON.parse(getItemFromLocal("users")) || [];
+		users.push({ username, password });
+		storeItemToLocal("users", JSON.stringify(users));
+		window.location.href = "login.html";
+		alert("Sign up successful! You can now log in.");
+	}
 }

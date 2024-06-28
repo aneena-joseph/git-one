@@ -7,13 +7,28 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
     <script src="script2.js"></script>
     <title>Portfolio</title>
   </head>
   <body onload="loadIndex()">
-    <div id="loader"><p id="loader-content">Loading...</p></div>
+    <div id="loader">
+        <div class="waviy">
+            <span style="--i:1">L</span>
+            <span style="--i:2">O</span>
+            <span style="--i:3">A</span>
+            <span style="--i:4">D</span>
+            <span style="--i:5">I</span>
+            <span style="--i:6">N</span>
+            <span style="--i:7">G</span>
+            <span style="--i:8">.</span>
+            <span style="--i:9">.</span>
+            <span style="--i:10">.</span>
+         
+           </div>
+    </div>
     <nav id="nav-bar" role="navigation">
       <ul id="nav-ul" class="ul">
         <div class="topnav-right" id="topnav">
@@ -70,7 +85,7 @@
             class="li"
           >
             <a id="nav-logout" href="login.html" tabindex="0">
-              <i class="fa fa-sign-out"></i>
+              <i class="fa-solid fa-right-from-bracket"></i>
             </a>
           </li>
         </div>
@@ -176,18 +191,18 @@
     </footer>
     
     <script>
-      if (sessionStorage.getItem("count") === "0") {
-        sessionStorage.setItem("count", "1");
-        window.addEventListener("load", function () {
-          setTimeout(() => {
+        if (sessionStorage.getItem("count") === "0") {
+            sessionStorage.setItem("count", "1");
+            window.addEventListener("load", function () {
+            setTimeout(() => {
+                let loader = document.getElementById("loader");
+                loader.style = "display: none;";
+            }, 1100);
+            });
+        } else {
             let loader = document.getElementById("loader");
             loader.style = "display: none;";
-          }, 1000);
-        });
-      } else {
-        let loader = document.getElementById("loader");
-        loader.style = "display: none;";
-      }
+        }
     </script>
   </body>
 </html>

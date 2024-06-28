@@ -118,7 +118,7 @@ body {
   width: 700px;
 }
 
-.fa-sign-out {
+.fa-right-from-bracket {
   font-weight: bolder;
 }
 
@@ -211,15 +211,6 @@ textarea {
   background: #5d2e8c;
 }
 
-#loader p {  
-  text-align: center;
-  color: #fff;
-  font-weight: bold;
-  font-size: 100px;
-  padding: 0;
-  margin: 0;
-}
-
 .p {
   text-align: justify;
 }
@@ -270,6 +261,31 @@ textarea {
 .ul-skill {
   list-style-type: circle;
   padding: 10px;
+}
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 60px;
+}
+
+.waviy span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+  
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
 }
 
 @media only screen and (max-width: 600px) {
